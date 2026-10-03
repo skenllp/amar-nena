@@ -52,7 +52,7 @@ main{background:var(--bg)}
 .bg-f{background:#FFF8F7 url(../img/bg-floral.jpg) center/cover no-repeat;padding:120px 36px 100px}
 .bg-a{background:#FFFDF9 url(../img/bg-arch.jpg) center/cover no-repeat;padding:140px 64px 110px}
 .dc{width:100%;max-width:340px;margin:10px 0 6px;mix-blend-mode:multiply;height:auto}
-.dv{width:100%;max-width:340px;margin:22px 0;mix-blend-mode:multiply;height:auto}
+.dv{width:100%;max-width:340px;margin:22px 0;height:auto}
 
 #open{position:absolute;left:50%;bottom:calc(12% + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:16px;transition:opacity .5s;-webkit-tap-highlight-color:transparent}
 #open.gone{opacity:0;pointer-events:none}
