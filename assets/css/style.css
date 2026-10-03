@@ -17,7 +17,8 @@ h2{font-weight:500;font-size:34px;color:var(--pink);letter-spacing:.04em}
 .date span{display:block;font:44px 'Great Vibes',cursive;color:#C98B94;margin:6px 0}
 .btn{display:inline-flex;gap:8px;align-items:center;margin-top:28px;padding:13px 30px;border-radius:999px;background:var(--deep);color:var(--ivory);text-decoration:none;font-size:18px;transition:transform .4s,background .4s}
 .btn:hover,.btn:active{transform:translateY(-2px);background:var(--taupe)}
-.sw{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:32px 0}
+.sw{display:flex;flex-direction:column;gap:16px;align-items:center;margin:32px 0}
+.sw-row{display:flex;gap:16px;justify-content:center}
 .sw i{width:52px;height:52px;border-radius:50%;border:none}
 .hero{padding:0;display:block}.hero img{width:100%;height:100dvh;object-fit:cover;display:block}
 .bg-f{background:var(--ivory) url(../img/bg-floral.jpg) center/cover no-repeat;padding:120px 36px 100px}
@@ -49,7 +50,7 @@ h2{font-weight:500;font-size:34px;color:var(--pink);letter-spacing:.04em}
 #mu{position:fixed;right:16px;top:calc(16px + env(safe-area-inset-top,0px));z-index:5;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);background:rgba(255,253,248,.85);color:var(--deep);font-size:18px;display:none;cursor:pointer}
 #mu.show{display:block}
 /* petals */
-#pt{position:fixed;top:0;left:50%;width:100%;max-width:520px;height:100%;transform:translateX(-50%);overflow:hidden;pointer-events:none;z-index:3}
+#pt{position:absolute;top:100vh;left:50%;width:100%;max-width:520px;height:calc(100% - 100vh);transform:translateX(-50%);overflow:hidden;pointer-events:none;z-index:3}
 #pt i{position:absolute;top:-24px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#FBE9EA,#F2D2D6);opacity:0;animation:fall linear infinite;will-change:transform,opacity}
 @keyframes fall{0%{opacity:0;transform:translate3d(0,0,0) rotate(0)}10%{opacity:var(--o)}90%{opacity:var(--o)}100%{opacity:0;transform:translate3d(var(--dx),110vh,0) rotate(var(--rot))}}
 @media(prefers-reduced-motion:reduce){.r{transition:none;opacity:1;transform:none}#pt{display:none}html{scroll-behavior:auto}.seal:before,.seal:after,.scrl{animation:none}}
