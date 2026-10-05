@@ -20,7 +20,16 @@ h2{font-weight:500;font-size:34px;color:var(--pink);letter-spacing:.04em}
 .sw{display:flex;flex-direction:column;gap:16px;align-items:center;margin:32px 0}
 .sw-row{display:flex;gap:16px;justify-content:center}
 .sw i{width:52px;height:52px;border-radius:50%;border:none}
-.hero{padding:0;display:block}.hero img{width:100%;height:100dvh;object-fit:cover;display:block}
+.dc-section{position:relative}
+.dc-section:after{content:"";position:absolute;inset:32px 28px;border:1px solid rgba(176,139,143,.35);border-radius:4px;pointer-events:none}
+.hero{padding:0;display:block;position:relative}
+.hero img{width:100%;height:100dvh;object-fit:cover;display:block}
+.hero-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;width:70%;max-width:380px;z-index:2}
+.hero-bismillah{font-family:'Amiri',serif;font-size:24px;color:#8B6B71;margin-bottom:10px;line-height:1.5}
+.hero-translation{font-size:14px;line-height:1.6;color:#8B6B71;margin-bottom:35px;font-style:italic}
+.hero-names{font-family:'Playfair Display','Cormorant Garamond',Georgia,serif;font-size:52px;font-weight:600;line-height:1;margin:20px 0;color:#8B6B71;letter-spacing:.02em}
+.hero-names span{font-family:'Great Vibes',cursive;font-size:26px;color:#B08B8F;display:block;margin:6px 0;font-weight:400}
+.hero-tagline{font-size:15px;line-height:1.65;color:#7D6B6F;margin-top:28px;font-style:italic}
 .bg-f{background:var(--ivory) url(../img/bg-floral.jpg) center/cover no-repeat;padding:120px 36px 100px}
 .bg-a{background:var(--ivory) url(../img/bg-arch.jpg) center/cover no-repeat;padding:140px 64px 110px}
 .dv{width:100%;max-width:340px;margin:22px 0;height:auto}
