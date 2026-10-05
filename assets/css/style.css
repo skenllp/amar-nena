@@ -50,7 +50,7 @@ h2{font-weight:500;font-size:34px;color:var(--pink);letter-spacing:.04em}
 #mu{position:fixed;right:16px;top:calc(16px + env(safe-area-inset-top,0px));z-index:5;width:42px;height:42px;border-radius:50%;border:1px solid #B08B8F;background:rgba(255,253,248,.85);color:#7D6B6F;font-size:18px;display:none;cursor:pointer}
 #mu.show{display:block}
 /* petals */
-#pt{position:fixed;top:0;left:50%;width:100%;max-width:520px;height:100%;transform:translateX(-50%);overflow:visible;pointer-events:none;z-index:5}
-#pt i{position:absolute;top:100vh;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#FBE9EA,#F2D2D6);opacity:0;animation:fall linear infinite;will-change:transform,opacity}
-@keyframes fall{0%{opacity:0;transform:translate3d(0,-50px,0) rotate(0)}10%{opacity:var(--o)}90%{opacity:var(--o)}100%{opacity:0;transform:translate3d(var(--dx),calc(100vh + 50px),0) rotate(var(--rot))}}
+#pt{position:fixed;top:0;left:50%;width:100%;max-width:520px;bottom:0;transform:translateX(-50%);pointer-events:none;z-index:5;overflow:hidden}
+#pt i{position:absolute;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#FBE9EA,#F2D2D6);animation:fall linear infinite}
+@keyframes fall{0%{opacity:0;top:100vh;left:var(--x);transform:rotate(0deg)}10%{opacity:var(--o)}90%{opacity:var(--o)}100%{opacity:0;top:200vh;left:calc(var(--x) + var(--dx));transform:rotate(var(--rot))}}
 @media(prefers-reduced-motion:reduce){.r{transition:none;opacity:1;transform:none}#pt{display:none}html{scroll-behavior:auto}.seal:before,.seal:after,.scrl{animation:none}}
