@@ -11,7 +11,7 @@ s.style.cssText=`--x:${x}%;width:${z}px;height:${z*1.3}px;--o:${.35+Math.random(
 const heroImg=document.querySelector('.hero img');
 const heroReady=heroImg&&heroImg.decode?heroImg.decode().catch(()=>{}):Promise.resolve();
 function end(){if(done)return;done=true;try{v.pause()}catch(e){}
-heroReady.then(()=>{scrollTo(0,0);document.body.classList.remove('lock');intro.classList.add('out');petals();setTimeout(()=>intro.remove(),800)})}
-$('open').addEventListener('click',()=>{$('open').classList.add('gone');intro.classList.add('go');mu.classList.add('show');setM(true);v.play().then(()=>{const hide=()=>{const p=$('pc');if(p)p.remove()};v.requestVideoFrameCallback?v.requestVideoFrameCallback(()=>requestAnimationFrame(hide)):v.addEventListener('timeupdate',hide,{once:true})}).catch(end);setTimeout(end,12000)});
+heroReady.then(()=>{scrollTo(0,0);document.body.classList.remove('lock');intro.classList.add('out');petals();setTimeout(()=>intro.remove(),1600)})}
+$('open').addEventListener('click',()=>{$('open').classList.add('gone');intro.classList.add('go');mu.classList.add('show');setM(true);v.play().catch(end);setTimeout(end,12000)});
 v.addEventListener('ended',end);v.addEventListener('error',end);
 mu.addEventListener('click',()=>setM(!on));
